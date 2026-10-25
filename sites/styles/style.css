@@ -1,0 +1,298 @@
+:root {
+  --primary-dark: #051F20;
+  --secondary-dark: #235347;
+  --oil-black: #0d0d0d;
+  --accent-gold: #f0f0f0;
+  --text-light: #f0f0f0;
+  --text-muted: #f0f0f0;
+  --border-light: #334455;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-light);
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  backdrop-filter: blur(5px);
+}
+
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+.logo-link {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: color 0.3s;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.logo-link:hover {
+  color: var(--accent-gold);
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+.nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: var(--accent-gold);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.page-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  margin-top: 80px; 
+}
+
+.page-hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--accent-gold);
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* Продукты */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: rgba(13, 13, 13, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 241, 222, 0.2);
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(13, 13, 13, 0.9);
+}
+
+.product-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--accent-gold);
+}
+
+/* Торговля */
+.trading-desc {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  background-color: rgba(13, 13, 13, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(218, 241, 222, 0.2);
+}
+
+.stat-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* Контакты */
+.contact-info {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2;
+  background-color: rgba(10, 10, 10, 0.315);
+  padding: 3rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(218, 241, 222, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+/* Шапка */
+.footer {
+  background-color: rgba(13, 13, 13, 0.9);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Классы для разных фонов страниц */
+.bg-about {
+  background-image: 
+    url('../img/zagraznenie-okruzausei-sredy-i-promyslennyi-ekster-er\ \(1\).jpg');
+}
+
+.bg-products {
+  background-image: 
+    url('../img/zagraznenie-okruzausei-sredy-i-promyslennyi-ekster-er\ \(1\).jpg');
+}
+
+.bg-trading {
+  background-image: 
+    url('../img/zagraznenie-okruzausei-sredy-i-promyslennyi-ekster-er\ \(1\).jpg');
+}
+
+.bg-contacts {
+  background-image: 
+    url('../img/zagraznenie-okruzausei-sredy-i-promyslennyi-ekster-er.jpg');
+}
+
+.submit-btn {
+  background-color: #000000;
+  color: var(--oil-black);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #000000;
+}
