@@ -1,3 +1,5 @@
+![Languages](https://img.shields.io/github/languages/top/Sweesz/Abramoil--oil-trade-website)
+![License](https://img.shields.io/badge/License-Educational-blue)
 # Abramoil — Educational Project
 
 ## About the Project
